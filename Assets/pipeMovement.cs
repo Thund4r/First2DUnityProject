@@ -14,5 +14,10 @@ public class pipeMovement : MonoBehaviour
     void Update()
     {
         transform.position = transform.position + new Vector3(-2, 0, 0) * Time.deltaTime;
+        if (transform.position.x < -13)
+        {
+            Destroy(gameObject);
+        }
+        
     }
 }
